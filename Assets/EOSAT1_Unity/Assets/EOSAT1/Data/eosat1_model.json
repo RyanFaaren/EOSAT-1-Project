@@ -1,0 +1,1489 @@
+{
+ "name": "EOS SAT-1",
+ "units": "mm",
+ "frame": "body: +X flight, +Y solar-wing axis, +Z camera boresight",
+ "envelope_mm": [
+  1130.3,
+  1390.0,
+  821.0
+ ],
+ "stowed_panel_normals": {
+  "wing_my": [
+   -0.775861,
+   -0.630904,
+   0.0
+  ],
+  "wing_py": [
+   -0.775861,
+   0.630904,
+   0.0
+  ]
+ },
+ "sources": "see Tools/eosat1_model.py",
+ "materials": {
+  "mli_gold": {
+   "color": [
+    0.86,
+    0.72,
+    0.38
+   ],
+   "metallic": 0.55,
+   "smoothness": 0.62,
+   "texture": "mli_gold.png",
+   "normal": "mli_gold_normal.png",
+   "normal_scale": 0.9
+  },
+  "panel_a": {
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metallic": 1.0,
+   "smoothness": 1.0,
+   "texture": "panel_a.png",
+   "mask": "panel_a_mask.png"
+  },
+  "panel_b": {
+   "color": [
+    1,
+    1,
+    1
+   ],
+   "metallic": 1.0,
+   "smoothness": 1.0,
+   "texture": "panel_b.png",
+   "mask": "panel_b_mask.png"
+  },
+  "panel_back": {
+   "color": [
+    0.16,
+    0.16,
+    0.17
+   ],
+   "metallic": 0.1,
+   "smoothness": 0.35
+  },
+  "bronze": {
+   "color": [
+    0.72,
+    0.55,
+    0.33
+   ],
+   "metallic": 0.75,
+   "smoothness": 0.72
+  },
+  "hood_rim": {
+   "color": [
+    0.05,
+    0.05,
+    0.05
+   ],
+   "metallic": 0.3,
+   "smoothness": 0.5
+  },
+  "lip": {
+   "color": [
+    0.3,
+    0.4,
+    0.38
+   ],
+   "metallic": 0.2,
+   "smoothness": 0.6
+  },
+  "optics": {
+   "color": [
+    0.006,
+    0.006,
+    0.008
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.85
+  },
+  "secondary": {
+   "color": [
+    0.3,
+    0.36,
+    0.34
+   ],
+   "metallic": 0.3,
+   "smoothness": 0.8
+  },
+  "white": {
+   "color": [
+    0.9,
+    0.89,
+    0.85
+   ],
+   "metallic": 0.0,
+   "smoothness": 0.35
+  },
+  "dark": {
+   "color": [
+    0.07,
+    0.07,
+    0.08
+   ],
+   "metallic": 0.3,
+   "smoothness": 0.45
+  },
+  "ring": {
+   "color": [
+    0.8,
+    0.64,
+    0.36
+   ],
+   "metallic": 0.85,
+   "smoothness": 0.78
+  },
+  "pcb": {
+   "color": [
+    0.06,
+    0.16,
+    0.1
+   ],
+   "metallic": 0.1,
+   "smoothness": 0.5
+  },
+  "tape": {
+   "color": [
+    0.74,
+    0.66,
+    0.48
+   ],
+   "metallic": 0.6,
+   "smoothness": 0.6
+  }
+ },
+ "joints": [
+  {
+   "name": "antenna_my",
+   "role": "antenna_jam",
+   "pivot": [
+    330.0,
+    -30.0,
+    -429.5
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "angle": 70.0
+  },
+  {
+   "name": "antenna_py",
+   "role": "antenna",
+   "pivot": [
+    330.0,
+    30.0,
+    -429.5
+   ],
+   "axis": [
+    1,
+    0,
+    0
+   ],
+   "angle": -70.0
+  },
+  {
+   "name": "wing_my",
+   "role": "wing_my",
+   "pivot": [
+    -580.079,
+    -27.607,
+    0.0
+   ],
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "angle": -39.116818213335655
+  },
+  {
+   "name": "wing_py",
+   "role": "wing_py",
+   "pivot": [
+    -580.079,
+    27.607,
+    0.0
+   ],
+   "axis": [
+    0,
+    0,
+    1
+   ],
+   "angle": 39.116818213335655
+  }
+ ],
+ "parts": [
+  {
+   "name": "Bus",
+   "type": "prism",
+   "polygon": [
+    [
+     565.15,
+     0.0
+    ],
+    [
+     0.0,
+     695.0
+    ],
+    [
+     -565.15,
+     0.0
+    ],
+    [
+     0.0,
+     -695.0
+    ]
+   ],
+   "z": [
+    -410.5,
+    410.5
+   ],
+   "materials": {
+    "sides": "mli_gold",
+    "front": "mli_gold",
+    "back": "mli_gold"
+   },
+   "uv_mm": 420.0
+  },
+  {
+   "name": "DragonEye -Y hood",
+   "type": "lathe",
+   "origin": [
+    -70.0,
+    -205.0,
+    410.5
+   ],
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "profile": [
+    [
+     196,
+     0
+    ],
+    [
+     196,
+     8
+    ],
+    [
+     182,
+     8
+    ],
+    [
+     182,
+     105
+    ],
+    [
+     168,
+     105
+    ],
+    [
+     161,
+     103
+    ],
+    [
+     160,
+     101
+    ],
+    [
+     160,
+     12
+    ],
+    [
+     0,
+     12
+    ]
+   ],
+   "materials": [
+    "bronze",
+    "bronze",
+    "bronze",
+    "hood_rim",
+    "lip",
+    "lip",
+    "optics",
+    "optics"
+   ],
+   "segments": 64
+  },
+  {
+   "name": "DragonEye -Y secondary",
+   "type": "lathe",
+   "origin": [
+    -70.0,
+    -205.0,
+    458.5
+   ],
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "profile": [
+    [
+     56,
+     0
+    ],
+    [
+     56,
+     8
+    ],
+    [
+     0,
+     8
+    ]
+   ],
+   "materials": [
+    "secondary",
+    "secondary"
+   ],
+   "segments": 40
+  },
+  {
+   "name": "DragonEye -Y vane",
+   "type": "box",
+   "center": [
+    -70.0,
+    -97.0,
+    462.5
+   ],
+   "size": [
+    104.0,
+    3.0,
+    6.0
+   ],
+   "material": "optics",
+   "x_axis": [
+    6.123233995736766e-17,
+    1.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "name": "DragonEye -Y vane",
+   "type": "box",
+   "center": [
+    -163.531,
+    -259.0,
+    462.5
+   ],
+   "size": [
+    104.0,
+    3.0,
+    6.0
+   ],
+   "material": "optics",
+   "x_axis": [
+    -0.8660254037844386,
+    -0.5000000000000001,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "name": "DragonEye -Y vane",
+   "type": "box",
+   "center": [
+    23.531,
+    -259.0,
+    462.5
+   ],
+   "size": [
+    104.0,
+    3.0,
+    6.0
+   ],
+   "material": "optics",
+   "x_axis": [
+    0.8660254037844384,
+    -0.5000000000000004,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "name": "DragonEye +Y hood",
+   "type": "lathe",
+   "origin": [
+    -70.0,
+    165.0,
+    410.5
+   ],
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "profile": [
+    [
+     196,
+     0
+    ],
+    [
+     196,
+     8
+    ],
+    [
+     182,
+     8
+    ],
+    [
+     182,
+     105
+    ],
+    [
+     168,
+     105
+    ],
+    [
+     161,
+     103
+    ],
+    [
+     160,
+     101
+    ],
+    [
+     160,
+     12
+    ],
+    [
+     0,
+     12
+    ]
+   ],
+   "materials": [
+    "bronze",
+    "bronze",
+    "bronze",
+    "hood_rim",
+    "lip",
+    "lip",
+    "optics",
+    "optics"
+   ],
+   "segments": 64
+  },
+  {
+   "name": "DragonEye +Y secondary",
+   "type": "lathe",
+   "origin": [
+    -70.0,
+    165.0,
+    458.5
+   ],
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "profile": [
+    [
+     56,
+     0
+    ],
+    [
+     56,
+     8
+    ],
+    [
+     0,
+     8
+    ]
+   ],
+   "materials": [
+    "secondary",
+    "secondary"
+   ],
+   "segments": 40
+  },
+  {
+   "name": "DragonEye +Y vane",
+   "type": "box",
+   "center": [
+    -70.0,
+    273.0,
+    462.5
+   ],
+   "size": [
+    104.0,
+    3.0,
+    6.0
+   ],
+   "material": "optics",
+   "x_axis": [
+    6.123233995736766e-17,
+    1.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "name": "DragonEye +Y vane",
+   "type": "box",
+   "center": [
+    -163.531,
+    111.0,
+    462.5
+   ],
+   "size": [
+    104.0,
+    3.0,
+    6.0
+   ],
+   "material": "optics",
+   "x_axis": [
+    -0.8660254037844386,
+    -0.5000000000000001,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "name": "DragonEye +Y vane",
+   "type": "box",
+   "center": [
+    23.531,
+    111.0,
+    462.5
+   ],
+   "size": [
+    104.0,
+    3.0,
+    6.0
+   ],
+   "material": "optics",
+   "x_axis": [
+    0.8660254037844384,
+    -0.5000000000000004,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Nadir cup -Y",
+   "type": "lathe",
+   "origin": [
+    250.0,
+    -195.0,
+    410.5
+   ],
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "profile": [
+    [
+     34,
+     0
+    ],
+    [
+     34,
+     6
+    ],
+    [
+     56,
+     64
+    ],
+    [
+     50,
+     64
+    ],
+    [
+     30,
+     16
+    ],
+    [
+     0,
+     16
+    ]
+   ],
+   "materials": [
+    "bronze",
+    "bronze",
+    "hood_rim",
+    "optics",
+    "optics"
+   ],
+   "segments": 40
+  },
+  {
+   "name": "Nadir cup +Y",
+   "type": "lathe",
+   "origin": [
+    250.0,
+    45.0,
+    410.5
+   ],
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "profile": [
+    [
+     34,
+     0
+    ],
+    [
+     34,
+     6
+    ],
+    [
+     56,
+     64
+    ],
+    [
+     50,
+     64
+    ],
+    [
+     30,
+     16
+    ],
+    [
+     0,
+     16
+    ]
+   ],
+   "materials": [
+    "bronze",
+    "bronze",
+    "hood_rim",
+    "optics",
+    "optics"
+   ],
+   "segments": 40
+  },
+  {
+   "name": "Magnetometer 1 collar",
+   "type": "lathe",
+   "origin": [
+    280.0,
+    259.0,
+    410.5
+   ],
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "profile": [
+    [
+     20,
+     0
+    ],
+    [
+     20,
+     14
+    ],
+    [
+     9,
+     14
+    ],
+    [
+     0,
+     14
+    ]
+   ],
+   "materials": [
+    "dark",
+    "dark",
+    "dark"
+   ],
+   "segments": 24
+  },
+  {
+   "name": "Magnetometer 1 boom",
+   "type": "cylinder",
+   "start": [
+    280.0,
+    259.0,
+    424.5
+   ],
+   "end": [
+    280.0,
+    259.0,
+    538.5
+   ],
+   "radius": 7.5,
+   "material": "dark"
+  },
+  {
+   "name": "Magnetometer 1 head",
+   "type": "lathe",
+   "origin": [
+    280.0,
+    259.0,
+    536.5
+   ],
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "profile": [
+    [
+     9,
+     0
+    ],
+    [
+     21,
+     6
+    ],
+    [
+     23,
+     18
+    ],
+    [
+     21,
+     30
+    ],
+    [
+     12,
+     38
+    ],
+    [
+     0,
+     40
+    ]
+   ],
+   "materials": [
+    "white",
+    "white",
+    "white",
+    "white",
+    "white"
+   ],
+   "segments": 24
+  },
+  {
+   "name": "Magnetometer 2 collar",
+   "type": "lathe",
+   "origin": [
+    165.0,
+    436.0,
+    410.5
+   ],
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "profile": [
+    [
+     20,
+     0
+    ],
+    [
+     20,
+     14
+    ],
+    [
+     9,
+     14
+    ],
+    [
+     0,
+     14
+    ]
+   ],
+   "materials": [
+    "dark",
+    "dark",
+    "dark"
+   ],
+   "segments": 24
+  },
+  {
+   "name": "Magnetometer 2 boom",
+   "type": "cylinder",
+   "start": [
+    165.0,
+    436.0,
+    424.5
+   ],
+   "end": [
+    165.0,
+    436.0,
+    538.5
+   ],
+   "radius": 7.5,
+   "material": "dark"
+  },
+  {
+   "name": "Magnetometer 2 head",
+   "type": "lathe",
+   "origin": [
+    165.0,
+    436.0,
+    536.5
+   ],
+   "axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "profile": [
+    [
+     9,
+     0
+    ],
+    [
+     21,
+     6
+    ],
+    [
+     23,
+     18
+    ],
+    [
+     21,
+     30
+    ],
+    [
+     12,
+     38
+    ],
+    [
+     0,
+     40
+    ]
+   ],
+   "materials": [
+    "white",
+    "white",
+    "white",
+    "white",
+    "white"
+   ],
+   "segments": 24
+  },
+  {
+   "name": "Fine sun sensor -Y front",
+   "type": "box",
+   "center": [
+    0.0,
+    -707.0,
+    376.5
+   ],
+   "size": [
+    84.0,
+    62.0,
+    72.0
+   ],
+   "material": "white",
+   "x_axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Fine sun sensor -Y front aperture",
+   "type": "cylinder",
+   "start": [
+    0.0,
+    -738.0,
+    376.5
+   ],
+   "end": [
+    0.0,
+    -740.0,
+    376.5
+   ],
+   "radius": 10.0,
+   "material": "optics"
+  },
+  {
+   "name": "Fine sun sensor -Y rear",
+   "type": "box",
+   "center": [
+    0.0,
+    -707.0,
+    -376.5
+   ],
+   "size": [
+    84.0,
+    62.0,
+    72.0
+   ],
+   "material": "white",
+   "x_axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Fine sun sensor -Y rear aperture",
+   "type": "cylinder",
+   "start": [
+    0.0,
+    -738.0,
+    -376.5
+   ],
+   "end": [
+    0.0,
+    -740.0,
+    -376.5
+   ],
+   "radius": 10.0,
+   "material": "optics"
+  },
+  {
+   "name": "Fine sun sensor +Y front",
+   "type": "box",
+   "center": [
+    0.0,
+    707.0,
+    376.5
+   ],
+   "size": [
+    84.0,
+    62.0,
+    72.0
+   ],
+   "material": "white",
+   "x_axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Fine sun sensor +Y front aperture",
+   "type": "cylinder",
+   "start": [
+    0.0,
+    738.0,
+    376.5
+   ],
+   "end": [
+    0.0,
+    740.0,
+    376.5
+   ],
+   "radius": 10.0,
+   "material": "optics"
+  },
+  {
+   "name": "Fine sun sensor +Y rear",
+   "type": "box",
+   "center": [
+    0.0,
+    707.0,
+    -376.5
+   ],
+   "size": [
+    84.0,
+    62.0,
+    72.0
+   ],
+   "material": "white",
+   "x_axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "name": "Fine sun sensor +Y rear aperture",
+   "type": "cylinder",
+   "start": [
+    0.0,
+    738.0,
+    -376.5
+   ],
+   "end": [
+    0.0,
+    740.0,
+    -376.5
+   ],
+   "radius": 10.0,
+   "material": "optics"
+  },
+  {
+   "name": "Separation ring",
+   "type": "lathe",
+   "origin": [
+    0,
+    0,
+    -410.5
+   ],
+   "axis": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "profile": [
+    [
+     232,
+     0
+    ],
+    [
+     232,
+     6
+    ],
+    [
+     215,
+     6
+    ],
+    [
+     215,
+     44
+    ],
+    [
+     204,
+     48
+    ],
+    [
+     178,
+     48
+    ],
+    [
+     178,
+     10
+    ],
+    [
+     0,
+     10
+    ]
+   ],
+   "materials": [
+    "ring",
+    "ring",
+    "ring",
+    "ring",
+    "ring",
+    "ring",
+    "dark",
+    "dark"
+   ],
+   "segments": 72
+  },
+  {
+   "name": "Star camera -Y",
+   "type": "box",
+   "center": [
+    120.0,
+    -300.0,
+    -440.5
+   ],
+   "size": [
+    96.0,
+    96.0,
+    62.0
+   ],
+   "material": "dark",
+   "x_axis": [
+    -0.853281833651959,
+    -0.521450009453975,
+    0.0
+   ],
+   "z_axis": [
+    0.22133200006102177,
+    -0.36217963646349016,
+    -0.9054490911587255
+   ]
+  },
+  {
+   "name": "Star camera -Y baffle",
+   "type": "lathe",
+   "origin": [
+    126.64,
+    -310.865,
+    -467.663
+   ],
+   "axis": [
+    0.22133200006102177,
+    -0.36217963646349016,
+    -0.9054490911587255
+   ],
+   "profile": [
+    [
+     30,
+     0
+    ],
+    [
+     30,
+     8
+    ],
+    [
+     48,
+     92
+    ],
+    [
+     42,
+     92
+    ],
+    [
+     24,
+     10
+    ],
+    [
+     0,
+     10
+    ]
+   ],
+   "materials": [
+    "dark",
+    "dark",
+    "dark",
+    "optics",
+    "optics"
+   ],
+   "segments": 32
+  },
+  {
+   "name": "Star camera +Y",
+   "type": "box",
+   "center": [
+    120.0,
+    300.0,
+    -440.5
+   ],
+   "size": [
+    96.0,
+    96.0,
+    62.0
+   ],
+   "material": "dark",
+   "x_axis": [
+    0.853281833651959,
+    -0.521450009453975,
+    0.0
+   ],
+   "z_axis": [
+    0.22133200006102177,
+    0.36217963646349016,
+    -0.9054490911587255
+   ]
+  },
+  {
+   "name": "Star camera +Y baffle",
+   "type": "lathe",
+   "origin": [
+    126.64,
+    310.865,
+    -467.663
+   ],
+   "axis": [
+    0.22133200006102177,
+    0.36217963646349016,
+    -0.9054490911587255
+   ],
+   "profile": [
+    [
+     30,
+     0
+    ],
+    [
+     30,
+     8
+    ],
+    [
+     48,
+     92
+    ],
+    [
+     42,
+     92
+    ],
+    [
+     24,
+     10
+    ],
+    [
+     0,
+     10
+    ]
+   ],
+   "materials": [
+    "dark",
+    "dark",
+    "dark",
+    "optics",
+    "optics"
+   ],
+   "segments": 32
+  },
+  {
+   "name": "UHF antenna module",
+   "type": "box",
+   "center": [
+    330.0,
+    0,
+    -418.5
+   ],
+   "size": [
+    100.0,
+    84.0,
+    16.0
+   ],
+   "material": "pcb",
+   "x_axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ]
+  },
+  {
+   "name": "UHF element -Y",
+   "type": "box",
+   "center": [
+    330.0,
+    -160.0,
+    -429.5
+   ],
+   "size": [
+    8.0,
+    260.0,
+    1.2
+   ],
+   "material": "tape",
+   "x_axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "joint": "antenna_my"
+  },
+  {
+   "name": "UHF element +Y",
+   "type": "box",
+   "center": [
+    330.0,
+    160.0,
+    -429.5
+   ],
+   "size": [
+    8.0,
+    260.0,
+    1.2
+   ],
+   "material": "tape",
+   "x_axis": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "z_axis": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "joint": "antenna_py"
+  },
+  {
+   "name": "Solar panel -Y",
+   "type": "panel",
+   "center": [
+    -308.556,
+    -341.703,
+    0.0
+   ],
+   "normal": [
+    -0.775861249350419,
+    -0.6309035756408479,
+    0.0
+   ],
+   "up": [
+    0,
+    0,
+    1
+   ],
+   "width": 830.0,
+   "height": 790.0,
+   "thickness": 25.0,
+   "materials": {
+    "front": "panel_a",
+    "back": "panel_back",
+    "edge": "bronze"
+   },
+   "joint": "wing_my"
+  },
+  {
+   "name": "Panel hinge -Y",
+   "type": "cylinder",
+   "start": [
+    -580.079,
+    -27.607,
+    -330.0
+   ],
+   "end": [
+    -580.079,
+    -27.607,
+    -270.0
+   ],
+   "radius": 9.0,
+   "material": "dark"
+  },
+  {
+   "name": "Panel hinge -Y",
+   "type": "cylinder",
+   "start": [
+    -580.079,
+    -27.607,
+    270.0
+   ],
+   "end": [
+    -580.079,
+    -27.607,
+    330.0
+   ],
+   "radius": 9.0,
+   "material": "dark"
+  },
+  {
+   "name": "Solar panel +Y",
+   "type": "panel",
+   "center": [
+    -308.556,
+    341.703,
+    0.0
+   ],
+   "normal": [
+    -0.775861249350419,
+    0.6309035756408479,
+    0.0
+   ],
+   "up": [
+    0,
+    0,
+    1
+   ],
+   "width": 830.0,
+   "height": 790.0,
+   "thickness": 25.0,
+   "materials": {
+    "front": "panel_b",
+    "back": "panel_back",
+    "edge": "bronze"
+   },
+   "joint": "wing_py"
+  },
+  {
+   "name": "Panel hinge +Y",
+   "type": "cylinder",
+   "start": [
+    -580.079,
+    27.607,
+    -330.0
+   ],
+   "end": [
+    -580.079,
+    27.607,
+    -270.0
+   ],
+   "radius": 9.0,
+   "material": "dark"
+  },
+  {
+   "name": "Panel hinge +Y",
+   "type": "cylinder",
+   "start": [
+    -580.079,
+    27.607,
+    270.0
+   ],
+   "end": [
+    -580.079,
+    27.607,
+    330.0
+   ],
+   "radius": 9.0,
+   "material": "dark"
+  }
+ ],
+ "markers": {
+  "jam_halo": {
+   "center": [
+    330.0,
+    -60.0,
+    -530.5
+   ],
+   "radius": 180.0
+  },
+  "jam_label": [
+   330.0,
+   0.0,
+   -830.5
+  ],
+  "boresight_origin": [
+   -70.0,
+   -20.0,
+   515.5
+  ],
+  "boresight_length": 3000.0,
+  "axes_length": 1150.0,
+  "deployed_cell_normal": [
+   -1.0,
+   0.0,
+   0.0
+  ]
+ }
+}
